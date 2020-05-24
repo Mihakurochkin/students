@@ -11,7 +11,7 @@
         }
         .cell {
            flex: 1;
-            border: 1px solid orchid;
+            border: 1px solid #1d1b1f;
         }
     </style>
     <meta charset="UTF-8">
@@ -31,9 +31,9 @@
             </div>
             <div class="row">
                 <div class="cell">Kurochkin</div>
-                <div class="cell">Jevgeniy</div>
-                <div class="cell">11</div>
-                <div class="cell">9</div>
+                <div class="cell">Illia</div>
+                <div class="cell">10</div>
+                <div class="cell">10</div>
                 <div class="cell">10</div>
             </div>
         </div>
@@ -62,6 +62,37 @@
         //     //   $('#page').append(element);
         //     // }, 5000)
         // });
+
+        const students = [
+          {
+            firstName: 'Jevgeniy',
+            lastName: 'Kurochkin',
+            grade1: 11,
+            grade2: 9,
+            total: 10,
+          },
+          {
+            firstName: 'Mykhailo',
+            lastName: 'Kurochkin',
+            grade1: 8,
+            grade2: 6,
+            total: 7,
+          },
+        ];
+
+        $(() => {
+          students.forEach((student) => {
+            $('#table').append($(`
+                <div class="row">
+                    <div class="cell">${student.lastName}</div>
+                    <div class="cell">${student.firstName}</div>
+                    <div class="cell">${student.grade1}</div>
+                    <div class="cell">${student.grade2}</div>
+                    <div class="cell">${student.total}</div>
+                </div>
+            `));
+          });
+        });
     </script>
 </body>
 </html>

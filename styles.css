@@ -1,0 +1,18 @@
+#header {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    flex: 1;
+    border: 1px solid #1d1b1f;
+}
+
+.first {
+    height: 35px;
+    font-weight: bold;
+}

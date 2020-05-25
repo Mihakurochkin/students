@@ -5,13 +5,20 @@
         #header {
             text-align: center;
         }
+
         .row {
             display: flex;
             flex-direction: row;
         }
+
         .cell {
            flex: 1;
             border: 1px solid #1d1b1f;
+        }
+
+        .first {
+            height: 35px;
+            font-weight: bold;
         }
     </style>
     <meta charset="UTF-8">
@@ -22,7 +29,7 @@
     <div id="page">
         <h1 id="header">Students</h1>
         <div id="table">
-            <div class="row">
+            <div class="row first">
                 <div class="cell">last name</div>
                 <div class="cell">first name</div>
                 <div class="cell">first grades</div>

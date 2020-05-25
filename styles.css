@@ -1,3 +1,10 @@
+* {
+    font-family: "Arial Black", serif;
+    color: #1d1b1f;
+}
+#page {
+    padding: 20px 70px 70px;
+}
 #header {
     text-align: center;
 }
@@ -5,14 +12,25 @@
 .row {
     display: flex;
     flex-direction: row;
+    border: 1px solid #1d1b1f;
+    border-top-width: 0;
 }
 
 .cell {
     flex: 1;
-    border: 1px solid #1d1b1f;
+    padding: 15px;
 }
 
-.first {
-    height: 35px;
+.first .cell {
     font-weight: bold;
+    color: white;
+    background-color: #1d1b1f;
+}
+
+#summary {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 120px;
+    padding-top: 10px;
+    font-size: 20px;
 }

@@ -29,8 +29,9 @@ students = students.map((value) => {
   return value;
 });
 
-
+const average = students.reduce((acc, student) => acc + student.total, 0)/ students.length;
 $(() => {
+  $('#summary').text(`Average: ${average}`);
   students.forEach((student) => {
     $('#table').append($(`
       <div class="row">

@@ -58,11 +58,24 @@
             grade1: 8,
             grade2: 6,
           },
+          {
+            firstName: 'Halyna',
+            lastName: 'Frontai',
+            grade1: 11,
+            grade2: 12,
+          },
+          {
+            firstName: 'James',
+            lastName: 'Dean',
+            grade1: 5,
+            grade2: 9,
+          }
         ];
         students = students.map((value) => {
-          value.total = (value.grade1 + value.grade2) / 2;
+          value.total = Math.round((value.grade1 + value.grade2) / 2);
           return value;
         });
+
 
         $(() => {
           students.forEach((student) => {

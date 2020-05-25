@@ -29,13 +29,6 @@
                 <div class="cell">second grades</div>
                 <div class="cell">total grades</div>
             </div>
-            <div class="row">
-                <div class="cell">Kurochkin</div>
-                <div class="cell">Illia</div>
-                <div class="cell">10</div>
-                <div class="cell">10</div>
-                <div class="cell">10</div>
-            </div>
         </div>
     </div>
 
@@ -45,22 +38,24 @@
             crossorigin="anonymous"></script>
     <script>
 
-        const students = [
+        let students = [
           {
             firstName: 'Jevgeniy',
             lastName: 'Kurochkin',
             grade1: 11,
             grade2: 9,
-            total: 10,
           },
           {
             firstName: 'Mykhailo',
             lastName: 'Kurochkin',
             grade1: 8,
             grade2: 6,
-            total: 7,
           },
         ];
+        students = students.map((value) => {
+          value.total = (value.grade1 + value.grade2) / 2;
+          return value;
+        });
 
         $(() => {
           students.forEach((student) => {

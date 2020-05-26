@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "firstName": "Jevgeniy",
+      "lastName": "Kurochkin",
+      "grade1": 11,
+      "grade2": 9
+    },
+    {
+      "id": 2,
+      "firstName": "Mykhailo",
+      "lastName": "Kurochkin",
+      "grade1": 8,
+      "grade2": 6
+    },
+    {
+      "id": 3,
+      "firstName": "Halyna",
+      "lastName": "Frontai",
+      "grade1": 11,
+      "grade2": 12
+    },
+    {
+      "id": 4,
+      "firstName": "James",
+      "lastName": "Dean",
+      "grade1": 5,
+      "grade2": 9
+    }
+  ]
+}

@@ -48,36 +48,9 @@ function renderTable() {
 // main code
 $(() => {
   update();
-  let array = [
-    {
-      firstName: 'Jevgeniy',
-      lastName: 'Kurochkin',
-      grade1: 11,
-      grade2: 9,
-    },
-    {
-      firstName: 'Mykhailo',
-      lastName: 'Kurochkin',
-      grade1: 8,
-      grade2: 6,
-    },
-    {
-      firstName: 'Halyna',
-      lastName: 'Frontai',
-      grade1: 11,
-      grade2: 12,
-    },
-    {
-      firstName: 'James',
-      lastName: 'Dean',
-      grade1: 5,
-      grade2: 9,
-    }
-  ];
 
-  setTimeout(() => {
+  $.get("http://localhost:3000/students", (array) => {
     setStudents(array);
     setLoading(false);
-    console.log(loading)
-  }, 1500)
+  });
 });

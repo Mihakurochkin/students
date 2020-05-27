@@ -13,8 +13,6 @@ function setStudents(arr) {
 // update
 function update() {
   $('#loader').css('display', loading ? 'block' : 'none');
-  const average = students.reduce((acc, student) => acc + student.total, 0)/ students.length;
-  $('#summary').text(`Average: ${average}`);
   renderTable();
 }
 

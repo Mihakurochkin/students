@@ -1,4 +1,9 @@
 // state
+let loading = true;
+function setLoading(value) {
+  loading = value;
+  update();
+}
 let students = [];
 function setStudents(arr) {
   students = arr;
@@ -7,9 +12,23 @@ function setStudents(arr) {
 
 // update
 function update() {
+  $('#loader').css('display', loading ? 'block' : 'none');
   const average = students.reduce((acc, student) => acc + student.total, 0)/ students.length;
   $('#summary').text(`Average: ${average}`);
+  renderTable();
+}
 
+function renderTable() {
+  $('#table').empty();
+  $('#table').append($(`
+    <div class="row first">
+      <div class="cell">last name</div>
+      <div class="cell">first name</div>
+      <div class="cell">first grades</div>
+      <div class="cell">second grades</div>
+      <div class="cell">total grades</div>
+    </div>
+  `));
   students.map((value) => {
     value.total = Math.round((value.grade1 + value.grade2) / 2);
     return value;
@@ -28,6 +47,7 @@ function update() {
 
 // main code
 $(() => {
+  update();
   let array = [
     {
       firstName: 'Jevgeniy',
@@ -57,5 +77,7 @@ $(() => {
 
   setTimeout(() => {
     setStudents(array);
-  }, 3000)
+    setLoading(false);
+    console.log(loading)
+  }, 1500)
 });

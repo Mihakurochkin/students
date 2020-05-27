@@ -2,11 +2,20 @@
     font-family: "Arial Black", serif;
     color: #1d1b1f;
 }
+
 #page {
     padding: 20px 70px 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
 #header {
     text-align: center;
+}
+
+#table {
+    width: 100%;
 }
 
 .row {
@@ -27,10 +36,17 @@
     background-color: #1d1b1f;
 }
 
-#summary {
-    text-align: right;
-    font-weight: bold;
-    padding-right: 120px;
-    padding-top: 10px;
-    font-size: 20px;
+#loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-top: 70px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
